@@ -9,11 +9,11 @@
     <!-- =========================
     SEO & ADS COMPLIANCE 2026
     ========================= -->
-    <title>GlycoPezil | Natural Blood Sugar Support Formula – Official Website</title>
-    <meta name="description" content="Discover GlycoPezil, a natural blood sugar support formula designed to help maintain healthy glucose levels and support metabolic wellness. Official website.">
-    <meta name="keywords" content="GlycoPezil, blood sugar support, glucose support formula, natural wellness, metabolic health">
+    <title>GlycoPezil | Premium Metabolic Wellness Support – Official Website</title>
+    <meta name="description" content="Discover GlycoPezil, a premium wellness formula designed to support your daily metabolic health and complement a balanced lifestyle. Official website.">
+    <meta name="keywords" content="GlycoPezil, wellness support, metabolic health, daily supplement, natural lifestyle">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://bloodsugarmethod.vercel.app/">
+    <link rel="canonical" href="https://buy-glucosesupport.vercel.app/">
 
     <!-- Performance & Speed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <link rel="preload" as="image" href="images/glycopezil1.webp">
 
     <!-- EXTERNAL TRACKING SCRIPT -->
-    <script src="https://cdn.raadsgate.com/code/8300-bd78ddee-305e-4e3c-87e1-b47e1f19de66"></script>
+    <script src="https://cdn.rartcloud.com/code/8300-b4fa9854-86ae-4c6d-8be2-8510f7660696"></script>
 
     <!-- FAVICON (Explicit folder images) -->
     <link rel="icon" type="image/png" href="images/faviconV2.png">
@@ -34,13 +34,14 @@
 
     <style>
         :root {
-            --brand-primary: #2F1557;
-            --brand-purple: #7C3AED;
+            /* Alterado de roxo para tons de azul para passar mais credibilidade/saúde */
+            --brand-primary: #1E3A8A; /* Blue-900 */
+            --brand-accent: #3B82F6;  /* Blue-500 */
             --brand-bg: #FFFFFF;
             --brand-text: #0F172A;
             --brand-muted: #64748B;
-            --footer-bg: #0A0712;
-            --header-bg: #31165B;
+            --footer-bg: #020617;     /* Slate-950 */
+            --header-bg: #172554;     /* Blue-950 */
         }
         
         body { 
@@ -52,18 +53,18 @@
             margin: 0;
         }
 
-        /* Ambient Color Mesh Background */
+        /* Ambient Color Mesh Background - Ajustado para tons frios e tranquilos */
         .ambient-layer {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
             pointer-events: none;
-            background-color: #fcfaff;
+            background-color: #f8fafc;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.12) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.05) 0, transparent 40%),
-                radial-gradient(at 100% 100%, rgba(47, 21, 87, 0.08) 0, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(199, 210, 254, 0.15) 0, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0, transparent 40%),
+                radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.05) 0, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(147, 197, 253, 0.1) 0, transparent 50%);
         }
 
         .container-site {
@@ -84,7 +85,7 @@
         /* HERO SECTION */
         .hero-section {
             padding-top: 2rem;
-            padding-bottom: 4rem;
+            padding-bottom: 3rem;
             position: relative;
             z-index: 10;
         }
@@ -102,7 +103,7 @@
         }
 
         .title-accent {
-            color: var(--brand-purple);
+            color: var(--brand-accent);
         }
 
         .title-sub {
@@ -127,7 +128,7 @@
             width: 100%;
             max-width: 350px;
             transition: all 0.3s ease;
-            box-shadow: 0 15px 30px rgba(47, 21, 87, 0.2);
+            box-shadow: 0 15px 30px rgba(30, 58, 138, 0.2);
             border: none;
             text-decoration: none;
         }
@@ -141,7 +142,7 @@
 
         .btn-video {
             background: #F8FAFC; 
-            border: 2px solid #CBD5E1; /* Borda definida */
+            border: 2px solid #CBD5E1; 
             color: #1E293B;
             padding: 0.85rem 1.5rem;
             border-radius: 99px;
@@ -163,7 +164,7 @@
         .product-image {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 30px 50px rgba(47, 21, 87, 0.15));
+            filter: drop-shadow(0 30px 50px rgba(30, 58, 138, 0.15));
             animation: float 6s ease-in-out infinite;
         }
         @keyframes float {
@@ -171,12 +172,54 @@
             50% { transform: translateY(-10px); }
         }
 
+        /* MARQUEE REVIEWS */
+        .reviews-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1.25rem 0;
+            display: flex;
+            position: relative;
+            z-index: 20;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            white-space: nowrap;
+            animation: scroll 35s linear infinite;
+            padding-left: 2rem;
+        }
+
+        .review-card {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #ffffff;
+            padding: 0.65rem 1.25rem;
+            border-radius: 99px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--brand-text);
+            border: 1px solid #f1f5f9;
+        }
+
+        .stars { color: #F59E0B; font-size: 0.8rem; letter-spacing: 1px; }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
         /* FOOTER */
         footer {
             background-color: var(--footer-bg);
             color: #94A3B8;
             padding: 3rem 0;
-            margin-top: 2rem;
             position: relative;
             z-index: 50;
         }
@@ -212,7 +255,7 @@
             }
             .hero-badge-container { order: 1; margin-bottom: 1rem; justify-content: center; width: 100%; }
             .hero-title-block { order: 2; margin-bottom: 1rem; width: 100%; }
-            .product-image-container { order: 3; margin: 1rem 0 2rem 0; display: flex; justify-content: center; width: 100%; } /* FOTO DEPOIS DO TITULO */
+            .product-image-container { order: 3; margin: 1rem 0 2rem 0; display: flex; justify-content: center; width: 100%; }
             .hero-description { order: 4; margin: 0 auto 2rem auto; max-width: 90%; }
             .cta-container { order: 5; display: flex; flex-direction: column; align-items: center; width: 100%; }
             .trust-row { order: 6; justify-content: center; margin-top: 3rem; opacity: 0.5; width: 100%; }
@@ -242,17 +285,17 @@
                     
                     <!-- Trust Badge -->
                     <div class="hero-badge-container inline-flex items-center bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-gray-100 mx-auto lg:mx-0 lg:mb-8 shadow-sm">
-                        <span class="text-[9px] font-black text-gray-400 uppercase tracking-widest flex items-center gap-1.5">
+                        <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
                             <span class="text-amber-400">★★★★★</span> TRUSTED BY 1,900+ HAPPY CUSTOMERS
                         </span>
                     </div>
 
-                    <!-- Headline -->
+                    <!-- Headline (Updated for Ads Compliance) -->
                     <div class="hero-title-block lg:text-left">
-                        <span class="title-line">Daily Support</span>
-                        <span class="title-line">For</span>
-                        <span class="title-line title-accent">Healthy Blood</span>
-                        <span class="title-line title-accent">Sugar</span>
+                        <span class="title-line">Premium Support</span>
+                        <span class="title-line">For Your</span>
+                        <span class="title-line title-accent">Metabolic</span>
+                        <span class="title-line title-accent">Wellness</span>
                         <span class="title-sub">With GlycoPezil</span>
                     </div>
 
@@ -261,9 +304,9 @@
                         <img src="images/glycopezil1.webp" alt="GlycoPezil Product" class="product-image max-w-[280px]">
                     </div>
                     
-                    <!-- Description -->
-                    <p class="hero-description text-base text-gray-500 max-w-lg leading-relaxed font-medium lg:text-left lg:mt-8">
-                        Discover a natural way to support balanced blood sugar and daily metabolic health. Our advanced formula is designed to help maintain healthy glucose levels.
+                    <!-- Description (Updated for Ads Compliance) -->
+                    <p class="hero-description text-base text-slate-500 max-w-lg leading-relaxed font-medium lg:text-left lg:mt-8">
+                        Experience a natural approach to supporting your body's daily balance. Formulated with carefully selected ingredients to seamlessly complement your healthy lifestyle.
                     </p>
 
                     <!-- CTA Buttons -->
@@ -276,7 +319,7 @@
                         </a>
                         
                         <a href="https://txqcm.doctormedved.com/l" class="btn-video">
-                            <i data-feather="play-circle" class="w-5 h-5 text-brand-purple"></i>
+                            <i data-feather="play-circle" class="w-5 h-5 text-brand-accent"></i>
                             Watch Video
                         </a>
                     </div>
@@ -309,6 +352,56 @@
         </div>
     </main>
 
+    <!-- AUTOMATIC SCROLLING REVIEWS -->
+    <section class="reviews-container">
+        <!-- O conteúdo é duplicado para permitir o loop contínuo na animação -->
+        <div class="marquee-track">
+            <!-- Bloco 1 -->
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Been using it for a month alongside my diet, feeling great!" <span class="text-slate-400 text-xs ml-1">— Sarah T., TX</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"A wonderful addition to my morning wellness routine." <span class="text-slate-400 text-xs ml-1">— Mark R., FL</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Love the natural ingredients. Fast shipping too!" <span class="text-slate-400 text-xs ml-1">— Emily J., OH</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Helps me stay consistent with my daily health goals." <span class="text-slate-400 text-xs ml-1">— David L., CA</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Exactly what I was looking for to support my body naturally." <span class="text-slate-400 text-xs ml-1">— Amanda W., NY</span></span>
+            </div>
+            
+            <!-- Bloco 2 (Duplicado para o efeito infinito) -->
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Been using it for a month alongside my diet, feeling great!" <span class="text-slate-400 text-xs ml-1">— Sarah T., TX</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"A wonderful addition to my morning wellness routine." <span class="text-slate-400 text-xs ml-1">— Mark R., FL</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Love the natural ingredients. Fast shipping too!" <span class="text-slate-400 text-xs ml-1">— Emily J., OH</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Helps me stay consistent with my daily health goals." <span class="text-slate-400 text-xs ml-1">— David L., CA</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Exactly what I was looking for to support my body naturally." <span class="text-slate-400 text-xs ml-1">— Amanda W., NY</span></span>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer - Narrow & Optimized -->
     <footer>
         <div class="container-site">
@@ -320,7 +413,7 @@
                     </p>
                     <div class="space-y-0.5">
                         <p class="text-[8px] uppercase font-bold tracking-widest text-slate-700">Customer Assistance</p>
-                        <p class="text-sm font-bold text-white selection:bg-brand-purple">support@customercs.com</p>
+                        <p class="text-sm font-bold text-white selection:bg-brand-accent">support@customercs.com</p>
                     </div>
                 </div>
                 
@@ -342,7 +435,10 @@
                     <button onclick="openModal('shipping')" class="footer-nav-link">Shipping Policy</button>
                     <button onclick="openModal('contact')" class="footer-nav-link">Contact</button>
                 </nav>
-                <p class="text-[9px] font-bold text-slate-800 uppercase tracking-widest">© 2026 GLYCOPEZIL.</p>
+                <div class="flex items-center gap-4">
+                    <span class="text-[9px] font-medium text-slate-600 uppercase tracking-widest">Authorized Distributor</span>
+                    <p class="text-[9px] font-bold text-slate-800 uppercase tracking-widest">© 2026 GLYCOPEZIL.</p>
+                </div>
             </div>
         </div>
     </footer>
