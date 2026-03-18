@@ -172,7 +172,7 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* MARQUEE REVIEWS */
+        /* MARQUEE REVIEWS (Larger, Multi-line) */
         .reviews-container {
             width: 100%;
             overflow: hidden;
@@ -180,18 +180,26 @@
             backdrop-filter: blur(4px);
             border-top: 1px solid rgba(0,0,0,0.05);
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 1.25rem 0;
+            padding: 3rem 0; /* Faixa mais larga */
             display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Espaço entre as linhas */
             position: relative;
             z-index: 20;
         }
 
         .marquee-track {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             white-space: nowrap;
-            animation: scroll 35s linear infinite;
-            padding-left: 2rem;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+            padding-left: 1.5rem;
+        }
+
+        .marquee-track.reverse {
+            animation-direction: reverse;
+            animation-duration: 45s; /* Velocidade ligeiramente diferente para variação */
         }
 
         .review-card {
@@ -199,16 +207,22 @@
             align-items: center;
             gap: 0.75rem;
             background: #ffffff;
-            padding: 0.65rem 1.25rem;
+            padding: 0.85rem 1.5rem; /* Cards um pouco maiores */
             border-radius: 99px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            font-size: 0.9rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            font-size: 0.95rem;
             font-weight: 500;
             color: var(--brand-text);
             border: 1px solid #f1f5f9;
+            transition: transform 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.06);
         }
 
-        .stars { color: #F59E0B; font-size: 0.8rem; letter-spacing: 1px; }
+        .stars { color: #F59E0B; font-size: 0.85rem; letter-spacing: 1px; }
 
         @keyframes scroll {
             0% { transform: translateX(0); }
@@ -262,6 +276,7 @@
             
             .btn-buy, .btn-video { margin-left: auto; margin-right: auto; }
             footer { padding: 2.5rem 0; }
+            .reviews-container { padding: 2rem 0; } /* Ajuste de respiro no mobile */
         }
     </style>
 </head>
@@ -290,7 +305,7 @@
                         </span>
                     </div>
 
-                    <!-- Headline (Updated for Ads Compliance) -->
+                    <!-- Headline -->
                     <div class="hero-title-block lg:text-left">
                         <span class="title-line">Premium Support</span>
                         <span class="title-line">For Your</span>
@@ -304,7 +319,7 @@
                         <img src="images/glycopezil1.webp" alt="GlycoPezil Product" class="product-image max-w-[280px]">
                     </div>
                     
-                    <!-- Description (Updated for Ads Compliance) -->
+                    <!-- Description -->
                     <p class="hero-description text-base text-slate-500 max-w-lg leading-relaxed font-medium lg:text-left lg:mt-8">
                         Experience a natural approach to supporting your body's daily balance. Formulated with carefully selected ingredients to seamlessly complement your healthy lifestyle.
                     </p>
@@ -352,9 +367,9 @@
         </div>
     </main>
 
-    <!-- AUTOMATIC SCROLLING REVIEWS -->
+    <!-- AUTOMATIC SCROLLING REVIEWS (2 ROWS) -->
     <section class="reviews-container">
-        <!-- O conteúdo é duplicado para permitir o loop contínuo na animação -->
+        <!-- Linha 1: Rolagem para a Esquerda -->
         <div class="marquee-track">
             <!-- Bloco 1 -->
             <div class="review-card">
@@ -377,7 +392,6 @@
                 <span class="stars">★★★★★</span>
                 <span>"Exactly what I was looking for to support my body naturally." <span class="text-slate-400 text-xs ml-1">— Amanda W., NY</span></span>
             </div>
-            
             <!-- Bloco 2 (Duplicado para o efeito infinito) -->
             <div class="review-card">
                 <span class="stars">★★★★★</span>
@@ -398,6 +412,52 @@
             <div class="review-card">
                 <span class="stars">★★★★★</span>
                 <span>"Exactly what I was looking for to support my body naturally." <span class="text-slate-400 text-xs ml-1">— Amanda W., NY</span></span>
+            </div>
+        </div>
+
+        <!-- Linha 2: Rolagem para a Direita -->
+        <div class="marquee-track reverse">
+            <!-- Bloco 1 Novos Depoimentos -->
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"My energy feels so much more stable throughout the day." <span class="text-slate-400 text-xs ml-1">— John D., TX</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Glad I found a supplement that fits my natural lifestyle." <span class="text-slate-400 text-xs ml-1">— Lisa M., OR</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Taking this every morning has been a game-changer." <span class="text-slate-400 text-xs ml-1">— Robert K., NY</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Great quality and easy to swallow capsules. Highly recommend." <span class="text-slate-400 text-xs ml-1">— Susan B., WA</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"I feel more balanced and focused. Will definitely buy again!" <span class="text-slate-400 text-xs ml-1">— Michael T., CO</span></span>
+            </div>
+            <!-- Bloco 2 Novos Depoimentos (Duplicado para o efeito infinito) -->
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"My energy feels so much more stable throughout the day." <span class="text-slate-400 text-xs ml-1">— John D., TX</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Glad I found a supplement that fits my natural lifestyle." <span class="text-slate-400 text-xs ml-1">— Lisa M., OR</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Taking this every morning has been a game-changer." <span class="text-slate-400 text-xs ml-1">— Robert K., NY</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"Great quality and easy to swallow capsules. Highly recommend." <span class="text-slate-400 text-xs ml-1">— Susan B., WA</span></span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span>"I feel more balanced and focused. Will definitely buy again!" <span class="text-slate-400 text-xs ml-1">— Michael T., CO</span></span>
             </div>
         </div>
     </section>
