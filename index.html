@@ -243,6 +243,20 @@
             color: #94A3B8;
         }
 
+        .verified-badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: #059669; /* emerald-600 */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: #ecfdf5; /* emerald-50 */
+            padding: 4px 8px;
+            border-radius: 99px;
+        }
+
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -392,104 +406,164 @@
         <div class="marquee-track">
             <!-- Bloco Original (10 depoimentos únicos) -->
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Been using it for a month alongside my diet, feeling great!"</span>
                 <span class="review-author">— Sarah T., TX</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"A wonderful addition to my morning wellness routine."</span>
                 <span class="review-author">— Mark R., FL</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Love the natural ingredients. Fast shipping too!"</span>
                 <span class="review-author">— Emily J., OH</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Helps me stay consistent with my daily health goals."</span>
                 <span class="review-author">— David L., CA</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Exactly what I was looking for to support my body naturally."</span>
                 <span class="review-author">— Amanda W., NY</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"My energy feels so much more stable throughout the day."</span>
                 <span class="review-author">— John D., TX</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Glad I found a supplement that fits my natural lifestyle."</span>
                 <span class="review-author">— Lisa M., OR</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Taking this every morning has been a game-changer."</span>
                 <span class="review-author">— Robert K., NY</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Great quality and easy to swallow capsules. Highly recommend."</span>
                 <span class="review-author">— Susan B., WA</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"I feel more balanced and focused. Will definitely buy again!"</span>
                 <span class="review-author">— Michael T., CO</span>
             </div>
             
             <!-- Bloco Duplicado (Exatamente os mesmos 10 para o efeito infinito) -->
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Been using it for a month alongside my diet, feeling great!"</span>
                 <span class="review-author">— Sarah T., TX</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"A wonderful addition to my morning wellness routine."</span>
                 <span class="review-author">— Mark R., FL</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Love the natural ingredients. Fast shipping too!"</span>
                 <span class="review-author">— Emily J., OH</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Helps me stay consistent with my daily health goals."</span>
                 <span class="review-author">— David L., CA</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Exactly what I was looking for to support my body naturally."</span>
                 <span class="review-author">— Amanda W., NY</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"My energy feels so much more stable throughout the day."</span>
                 <span class="review-author">— John D., TX</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Glad I found a supplement that fits my natural lifestyle."</span>
                 <span class="review-author">— Lisa M., OR</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Taking this every morning has been a game-changer."</span>
                 <span class="review-author">— Robert K., NY</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"Great quality and easy to swallow capsules. Highly recommend."</span>
                 <span class="review-author">— Susan B., WA</span>
             </div>
             <div class="review-card">
-                <span class="stars">★★★★★</span>
+                <div class="flex justify-between items-center w-full">
+                    <span class="stars">★★★★★</span>
+                    <span class="verified-badge"><i data-feather="check-circle" class="w-3 h-3"></i> Verified Buyer</span>
+                </div>
                 <span class="review-text">"I feel more balanced and focused. Will definitely buy again!"</span>
                 <span class="review-author">— Michael T., CO</span>
             </div>
