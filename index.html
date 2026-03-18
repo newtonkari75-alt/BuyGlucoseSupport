@@ -190,10 +190,8 @@
             backdrop-filter: blur(4px);
             border-top: 1px solid rgba(0,0,0,0.05);
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 4rem 0; /* Faixa com muito mais respiro */
+            padding: 3rem 0; /* Ajustado para uma faixa */
             display: flex;
-            flex-direction: column;
-            gap: 2rem; /* Espaço maior entre as linhas de cards */
             position: relative;
             z-index: 20;
         }
@@ -203,13 +201,8 @@
             gap: 2rem; /* Espaçamento entre os quadrados */
             white-space: nowrap;
             width: max-content;
-            animation: scroll 40s linear infinite;
+            animation: scroll 60s linear infinite; /* Tempo aumentado pois a faixa agora é maior */
             padding-left: 2rem;
-        }
-
-        .marquee-track.reverse {
-            animation-direction: reverse;
-            animation-duration: 45s; 
         }
 
         .review-card {
@@ -393,11 +386,11 @@
         </div>
     </main>
 
-    <!-- AUTOMATIC SCROLLING REVIEWS (2 ROWS - SQUARES) -->
+    <!-- AUTOMATIC SCROLLING REVIEWS (1 ROW - ALL 10 CARDS) -->
     <section class="reviews-container">
-        <!-- Linha 1: Rolagem para a Esquerda -->
+        <!-- Faixa Única -->
         <div class="marquee-track">
-            <!-- Bloco 1 -->
+            <!-- Bloco Original (10 depoimentos únicos) -->
             <div class="review-card">
                 <span class="stars">★★★★★</span>
                 <span class="review-text">"Been using it for a month alongside my diet, feeling great!"</span>
@@ -423,37 +416,6 @@
                 <span class="review-text">"Exactly what I was looking for to support my body naturally."</span>
                 <span class="review-author">— Amanda W., NY</span>
             </div>
-            <!-- Bloco 2 (Duplicado para o efeito infinito) -->
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">"Been using it for a month alongside my diet, feeling great!"</span>
-                <span class="review-author">— Sarah T., TX</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">"A wonderful addition to my morning wellness routine."</span>
-                <span class="review-author">— Mark R., FL</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">"Love the natural ingredients. Fast shipping too!"</span>
-                <span class="review-author">— Emily J., OH</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">"Helps me stay consistent with my daily health goals."</span>
-                <span class="review-author">— David L., CA</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <span class="review-text">"Exactly what I was looking for to support my body naturally."</span>
-                <span class="review-author">— Amanda W., NY</span>
-            </div>
-        </div>
-
-        <!-- Linha 2: Rolagem para a Direita -->
-        <div class="marquee-track reverse">
-            <!-- Bloco 1 Novos Depoimentos -->
             <div class="review-card">
                 <span class="stars">★★★★★</span>
                 <span class="review-text">"My energy feels so much more stable throughout the day."</span>
@@ -479,7 +441,33 @@
                 <span class="review-text">"I feel more balanced and focused. Will definitely buy again!"</span>
                 <span class="review-author">— Michael T., CO</span>
             </div>
-            <!-- Bloco 2 Novos Depoimentos (Duplicado para o efeito infinito) -->
+            
+            <!-- Bloco Duplicado (Exatamente os mesmos 10 para o efeito infinito) -->
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span class="review-text">"Been using it for a month alongside my diet, feeling great!"</span>
+                <span class="review-author">— Sarah T., TX</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span class="review-text">"A wonderful addition to my morning wellness routine."</span>
+                <span class="review-author">— Mark R., FL</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span class="review-text">"Love the natural ingredients. Fast shipping too!"</span>
+                <span class="review-author">— Emily J., OH</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span class="review-text">"Helps me stay consistent with my daily health goals."</span>
+                <span class="review-author">— David L., CA</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <span class="review-text">"Exactly what I was looking for to support my body naturally."</span>
+                <span class="review-author">— Amanda W., NY</span>
+            </div>
             <div class="review-card">
                 <span class="stars">★★★★★</span>
                 <span class="review-text">"My energy feels so much more stable throughout the day."</span>
