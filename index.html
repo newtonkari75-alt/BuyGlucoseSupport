@@ -257,6 +257,70 @@
             border-radius: 99px;
         }
 
+        /* FAQ SECTION */
+        .faq-section {
+            padding: 5rem 0;
+            background-color: #FAFAFA;
+            position: relative;
+            z-index: 20;
+        }
+        
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .faq-item {
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            background: #fff;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        
+        .faq-summary {
+            padding: 1.25rem 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--brand-text);
+            list-style: none; /* remove seta padrão */
+            font-size: 1.05rem;
+        }
+        
+        .faq-summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+            color: var(--brand-accent);
+        }
+        
+        details[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-content {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            color: var(--brand-muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            font-weight: 500;
+            animation: fadeInDown 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -364,11 +428,6 @@
                             <div class="cart-dot">
                                 <i data-feather="shopping-cart" class="w-4 h-4 text-white"></i>
                             </div>
-                        </a>
-                        
-                        <a href="https://txqcm.doctormedved.com/l" class="btn-video">
-                            <i data-feather="play-circle" class="w-5 h-5 text-brand-accent"></i>
-                            Watch Video
                         </a>
                     </div>
 
@@ -566,6 +625,88 @@
                 </div>
                 <span class="review-text">"I feel more balanced and focused. Will definitely buy again!"</span>
                 <span class="review-author">— Michael T., CO</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & LABEL SECTION -->
+    <section class="faq-section">
+        <div class="container-site">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
+                
+                <!-- LABEL IMAGE AREA -->
+                <div class="mb-10 lg:mb-0 flex justify-center lg:sticky lg:top-8">
+                    <img src="images/rotulo.png" 
+                         alt="GlycoPezil Product Label details" 
+                         class="max-w-full h-auto rounded-2xl shadow-xl border border-gray-100"
+                         loading="lazy">
+                </div>
+
+                <!-- FAQ ACCORDION AREA -->
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold mb-8 text-slate-900 tracking-tight text-center lg:text-left">
+                        Frequently Asked <span class="text-brand-accent">Questions</span>
+                    </h2>
+                    
+                    <div class="faq-accordion">
+                        
+                        <!-- Question 1 -->
+                        <details class="faq-item" name="faq-group">
+                            <summary class="faq-summary">
+                                What exactly is GlycoPezil?
+                                <i data-feather="chevron-down" class="faq-icon w-5 h-5"></i>
+                            </summary>
+                            <div class="faq-content">
+                                GlycoPezil is a premium dietary supplement crafted with carefully selected natural ingredients to support your body's metabolic wellness. When paired with a healthy lifestyle, it is designed to seamlessly complement your daily routine for optimal balance.
+                            </div>
+                        </details>
+
+                        <!-- Question 2 -->
+                        <details class="faq-item" name="faq-group">
+                            <summary class="faq-summary">
+                                How should I use this product?
+                                <i data-feather="chevron-down" class="faq-icon w-5 h-5"></i>
+                            </summary>
+                            <div class="faq-content">
+                                For best results, simply take one capsule daily with a glass of water, preferably in the morning. Consistency is key when it comes to supporting your long-term wellness journey.
+                            </div>
+                        </details>
+
+                        <!-- Question 3 -->
+                        <details class="faq-item" name="faq-group" open>
+                            <summary class="faq-summary">
+                                Is there a money-back guarantee?
+                                <i data-feather="chevron-down" class="faq-icon w-5 h-5"></i>
+                            </summary>
+                            <div class="faq-content">
+                                Absolutely! We are completely confident in our formula, which is why every order is backed by a <strong>60-Day, 100% Satisfaction Guarantee</strong>. If you aren't thrilled with your experience within the first 60 days of purchase, simply contact our friendly US-based support team for a prompt and courteous full refund.
+                            </div>
+                        </details>
+
+                        <!-- Question 4 -->
+                        <details class="faq-item" name="faq-group">
+                            <summary class="faq-summary">
+                                Where is GlycoPezil manufactured?
+                                <i data-feather="chevron-down" class="faq-icon w-5 h-5"></i>
+                            </summary>
+                            <div class="faq-content">
+                                Every single bottle of GlycoPezil is proudly manufactured right here in the USA. Our facilities are state-of-the-art and GMP (Good Manufacturing Practice) certified, ensuring strict quality control, purity, and safety standards for every batch.
+                            </div>
+                        </details>
+
+                    </div>
+                    
+                    <!-- Extra Buy Button Below FAQ -->
+                    <div class="mt-10 flex justify-center lg:justify-start">
+                        <a href="https://mwebora.com/12000/1227/7/?" class="btn-buy" style="max-w: 280px;">
+                            <span>Secure Your Order</span>
+                            <div class="cart-dot">
+                                <i data-feather="arrow-right" class="w-4 h-4 text-white"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
