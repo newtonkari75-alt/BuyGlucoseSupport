@@ -44,14 +44,14 @@
 
     <style>
         :root {
-            /* Alterado de roxo para tons de azul para passar mais credibilidade/saúde */
-            --brand-primary: #1E3A8A; /* Blue-900 */
-            --brand-accent: #3B82F6;  /* Blue-500 */
+            /* Alterado para o tom roxo solicitado (#3E128A) */
+            --brand-primary: #3E128A; 
+            --brand-accent: #5C1FC4;  /* Tom levemente mais claro para criar destaque no texto */
             --brand-bg: #FFFFFF;
             --brand-text: #0F172A;
             --brand-muted: #64748B;
-            --footer-bg: #020617;     /* Slate-950 */
-            --header-bg: #172554;     /* Blue-950 */
+            --footer-bg: #0B031A;     /* Fundo bem escuro com um toque do roxo */
+            --header-bg: #270B59;     /* Tom mais escuro de #3E128A para o cabeçalho */
         }
         
         body { 
@@ -71,10 +71,10 @@
             pointer-events: none;
             background-color: #f8fafc;
             background-image: 
-                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0, transparent 50%), 
+                radial-gradient(at 0% 0%, rgba(62, 18, 138, 0.08) 0, transparent 50%), 
                 radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.03) 0, transparent 40%),
-                radial-gradient(at 100% 100%, rgba(30, 58, 138, 0.05) 0, transparent 50%),
-                radial-gradient(at 0% 100%, rgba(147, 197, 253, 0.1) 0, transparent 50%);
+                radial-gradient(at 100% 100%, rgba(39, 11, 89, 0.05) 0, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(92, 31, 196, 0.1) 0, transparent 50%);
         }
 
         .container-site {
@@ -138,7 +138,7 @@
             width: 100%;
             max-width: 350px;
             transition: all 0.3s ease;
-            box-shadow: 0 15px 30px rgba(30, 58, 138, 0.2);
+            box-shadow: 0 15px 30px rgba(62, 18, 138, 0.2);
             border: none;
             text-decoration: none;
         }
@@ -174,7 +174,7 @@
         .product-image {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 30px 50px rgba(30, 58, 138, 0.15));
+            filter: drop-shadow(0 30px 50px rgba(62, 18, 138, 0.15));
             animation: float 6s ease-in-out infinite;
         }
         @keyframes float {
@@ -632,10 +632,14 @@
     <!-- FAQ & LABEL SECTION -->
     <section class="faq-section">
         <div class="container-site">
-            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-start">
+            <div class="flex flex-col items-center max-w-4xl mx-auto">
                 
+                <h2 class="text-3xl lg:text-4xl font-extrabold mb-10 text-slate-900 tracking-tight text-center">
+                    Frequently Asked <span class="text-brand-accent">Questions</span>
+                </h2>
+
                 <!-- LABEL IMAGE AREA -->
-                <div class="mb-10 lg:mb-0 flex justify-center lg:sticky lg:top-8">
+                <div class="mb-12 flex justify-center w-full">
                     <img src="images/rotulo.png" 
                          alt="GlycoPezil Product Label details" 
                          class="max-w-full h-auto rounded-2xl shadow-xl border border-gray-100"
@@ -643,11 +647,7 @@
                 </div>
 
                 <!-- FAQ ACCORDION AREA -->
-                <div>
-                    <h2 class="text-3xl lg:text-4xl font-extrabold mb-8 text-slate-900 tracking-tight text-center lg:text-left">
-                        Frequently Asked <span class="text-brand-accent">Questions</span>
-                    </h2>
-                    
+                <div class="w-full">
                     <div class="faq-accordion">
                         
                         <!-- Question 1 -->
@@ -697,7 +697,7 @@
                     </div>
                     
                     <!-- Extra Buy Button Below FAQ -->
-                    <div class="mt-10 flex justify-center lg:justify-start">
+                    <div class="mt-10 flex justify-center">
                         <a href="https://mwebora.com/12000/1227/7/?" class="btn-buy" style="max-w: 280px;">
                             <span>Secure Your Order</span>
                             <div class="cart-dot">
